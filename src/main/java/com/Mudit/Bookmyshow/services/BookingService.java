@@ -41,7 +41,7 @@ public class BookingService {
         this.calculatePriceService = calculatePriceService;
     }
     @Transactional(isolation = Isolation.SERIALIZABLE)
-    Booking bookMovie(Long userId,Long showId, List<Long> showSeatIds) throws Exception{
+    public Booking bookMovie(Long userId,Long showId, List<Long> showSeatIds) throws Exception{
 
         //1. Get the user object from userid
         Optional<User> optionalUser = userRepository.findById(userId);

@@ -8,6 +8,6 @@ import lombok.Setter;
 @Setter
 public class BookMovieResponseDto {
     private BookingStatus bookingStatus;
-    private Long bookingId;
+    private int bookingId;
     private int amount;
 }
