@@ -4,11 +4,15 @@ import com.Mudit.Bookmyshow.model.Show;
 import com.Mudit.Bookmyshow.model.ShowSeat;
 import com.Mudit.Bookmyshow.model.ShowSeatType;
 import com.Mudit.Bookmyshow.repositories.ShowSeatTypeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CalculatePriceService {
     private ShowSeatTypeRepository showSeatTypeRepository;
+    @Autowired
     public CalculatePriceService(ShowSeatTypeRepository showSeatTypeRepository){
         this.showSeatTypeRepository = showSeatTypeRepository;
     }

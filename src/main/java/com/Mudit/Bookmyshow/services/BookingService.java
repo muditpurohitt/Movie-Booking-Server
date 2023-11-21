@@ -10,6 +10,7 @@ import com.Mudit.Bookmyshow.repositories.ShowSeatRepository;
 import com.Mudit.Bookmyshow.repositories.UserRepository;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,7 +33,7 @@ public class BookingService {
     private ShowSeatRepository showSeatRepository;
     private ShowRepository showRepository;
     private CalculatePriceService calculatePriceService;
-
+    @Autowired
     BookingService(UserRepository userRepository, ShowSeatRepository showSeatRepository,
                    ShowRepository showRepository,CalculatePriceService calculatePriceService){
         this.userRepository = userRepository;
