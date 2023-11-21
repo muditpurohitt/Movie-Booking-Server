@@ -9,4 +9,5 @@ public class User extends BaseClass{
     private String name;
     private String emailid;
     private String phoneNo;
+    private String password;
 }
