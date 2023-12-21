@@ -89,6 +89,6 @@ public class BookingService {
         booking.setShow(show);
         booking.setAmount(calculatePriceService.calculatePrice(show, savedShowSeats));
 
-         return null;
+         return booking;
     }
 }
