@@ -21,7 +21,7 @@ public class UserService {
         Optional<User> user = userRepository.findByEmailId(email);
 
         //2.If yes, take to login page.
-        if(user.isEmpty()){
+        if(!user.isEmpty()){
             return login(email, password);
         }
 
